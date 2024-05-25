@@ -37,7 +37,7 @@ body {
 .down-arrow {
   position: absolute;
   bottom: 30px;
-  left: calc(50% - 40px);
+  left: calc(50% + 40px);
   transform: translateY(0); /* Initial transform for better visibility */
   animation: jumpInfinite 1.5s infinite;
 }
@@ -97,21 +97,6 @@ h1 {
   text-decoration: none;
   color: #fff;
   margin-top: 40px;
-}
-
-@media screen and (max-width: 975px) {
-  #about {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .about-left {
-    width: calc(100% - 80px);
-  }
-
-  .about-right {
-    width: 100%;
-  }
 }
 
 /* Hamburger menu */
@@ -176,4 +161,26 @@ h1 {
 .menuIcon.material-icons,
 .closeIcon.material-icons {
   font-size: 2rem; /* Adjust the size as needed */
+}
+
+@media screen and (max-width: 975px) {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-left {
+    width: calc(100% - 80px);
+  }
+
+  .about-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
 }
