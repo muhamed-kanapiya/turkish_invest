@@ -37,7 +37,8 @@ body {
 .down-arrow {
   position: absolute;
   bottom: 30px;
-  left: calc(50% + 40px);
+  left: 50%;
+  margin-left: -40px;
   transform: translateY(0); /* Initial transform for better visibility */
   animation: jumpInfinite 1.5s infinite;
 }
