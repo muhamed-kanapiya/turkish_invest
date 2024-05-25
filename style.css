@@ -73,7 +73,7 @@ h1 {
 .about-left {
   width: 50%;
   background: #114477;
-  padding: 30px;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,4 +97,19 @@ h1 {
   text-decoration: none;
   color: #fff;
   margin-top: 40px;
+}
+
+@media screen and (max-width: 975px) {
+  #about {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .about-left {
+    width: calc(100% - 80px);
+  }
+
+  .about-right {
+    width: 100%;
+  }
 }
