@@ -12,9 +12,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
+    <div class="menu">
+        <img src="/assets/Baykar-Logo.svg" alt="">
+        <a href="#">Hakkımızda</a>
+        <a href="#">Avantajlarımız</a>
+        <a href="#">Ücretsiz</a>
+    </div>
+    <button class="hamburger">
+        <!-- material icons https://material.io/resources/icons/ -->
+        <i class="menuIcon material-icons">menu</i>
+        <i class="closeIcon material-icons" style="display: none;">close</i>
+    </button>
     <section id="hero">
         <video autoplay muted loop id="myVideo">
             <source src="/assets/video_bg.mp4" type="video/mp4">
@@ -54,6 +67,32 @@
         </div>
         <div class="about-right"></div>
     </section>
+    <script>
+        const menu = document.querySelector(".menu");
+        const menuItems = document.querySelectorAll(".menuItem");
+        const hamburger = document.querySelector(".hamburger");
+        const closeIcon = document.querySelector(".closeIcon");
+        const menuIcon = document.querySelector(".menuIcon");
+
+        function toggleMenu() {
+            if (menu.classList.contains("showMenu")) {
+                menu.classList.remove("showMenu");
+                closeIcon.style.display = "none";
+                menuIcon.style.display = "block";
+            } else {
+                menu.classList.add("showMenu");
+                closeIcon.style.display = "block";
+                menuIcon.style.display = "none";
+            }
+        }
+
+        hamburger.addEventListener("click", toggleMenu);
+
+        menuItems.forEach(function (menuItem) {
+            menuItem.addEventListener("click", toggleMenu);
+        });
+
+    </script>
 </body>
 
 </html>
