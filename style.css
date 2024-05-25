@@ -38,7 +38,7 @@ body {
   position: absolute;
   bottom: 30px;
   left: 50%;
-  margin-left: -40px;
+  margin-left: -20px;
   transform: translateY(0); /* Initial transform for better visibility */
   animation: jumpInfinite 1.5s infinite;
 }
@@ -94,10 +94,162 @@ h1 {
   display: inline-block;
   font-weight: 700;
   background: #000;
-  padding: 20px 40px;
+  padding: 15px 50px;
   text-decoration: none;
   color: #fff;
   margin-top: 40px;
+}
+
+.invest-button {
+  font-weight: 700;
+  background: transparent;
+  padding: 15px 50px;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-top: 40px;
+}
+
+#invest-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#invest {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/invest.jpeg") no-repeat;
+  background-size: cover;
+  height: 100%;
+  z-index: -1;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+.invest-content {
+  z-index: 5;
+}
+
+.invest-content h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.invest-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: stretch;
+  margin-top: 50px;
+}
+
+.invest-item {
+  text-align: center;
+}
+
+.invest-item p {
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 300;
+}
+
+#points {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("assets/points.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  z-index: -1;
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+.points-descr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.points-content h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.point-features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: stretch;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.points-item {
+  text-align: center;
+}
+
+.points-item p {
+  font-size: 12px;
+  line-height: 1.55;
+  font-weight: 300;
+  width: 250px;
+}
+
+#points-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form {
+  background: #222c37;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+.form-content h2 {
+  font-size: 48px;
+  text-align: center;
+}
+
+.form-content {
+  width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  background: #ff7300;
+  width: 107%;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 /* Hamburger menu */
@@ -176,6 +328,16 @@ h1 {
 
   .about-right {
     width: 100%;
+  }
+
+  .invest-features {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .point-features {
+    display: flex;
+    flex-direction: column;
   }
 }
 
