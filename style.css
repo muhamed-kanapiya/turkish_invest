@@ -228,6 +228,7 @@ h1 {
 
 .form-content p {
   padding: 30px;
+  text-align: center;
 }
 
 form {
@@ -383,11 +384,24 @@ input[type="checkbox"] {
   }
 
   .submit-button {
-    width: 50dvh;
+    width: 40dvh;
   }
 
   input {
-    width: 50dvh;
+    width: 40dvh;
+  }
+
+  #final p {
+    font-size: 24px;
+    width: 70%;
+    text-align: center;
+    line-height: 1.45;
+    letter-spacing: 0.45;
+    font-weight: 300;
+  }
+
+  .form-content {
+    width: 90dvw;
   }
 }
 
