@@ -294,6 +294,15 @@ input[type="checkbox"] {
   font-weight: 300;
 }
 
+#thank-you {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  background: #080c19;
+  text-align: center;
+}
+
 /* Hamburger menu */
 .hamburger {
   position: fixed;

@@ -13,7 +13,53 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Keitaro tracking script -->
+    <script type='application/javascript'>
+        if (!window.KTracking) { window.KTracking = { collectNonUniqueClicks: false, multiDomain: false, R_PATH: 'https://gazenerya.com/T9XxWkFW', P_PATH: 'https://gazenerya.com/0348b99/postback', listeners: [], reportConversion: function () { this.queued = arguments; }, getSubId: function (fn) { this.listeners.push(fn); }, ready: function (fn) { this.listeners.push(fn); } }; } (function () { var a = document.createElement('script'); a.type = 'application/javascript'; a.async = true; a.src = 'https://gazenerya.com/js/k.min.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(a, s) })();
+    </script><noscript><img height='0' width='0' alt='' src='https://gazenerya.com/T9XxWkFW' /></noscript>
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var queryParams = new URLSearchParams(new URL(url).search);
+            return queryParams.get(name);
+        }
 
+        const fbPixelValue = getParameterByName('xx');
+
+        if (fbPixelValue) {
+            document.cookie = "pixel=" + fbPixelValue + "; path=/";
+        }
+    </script>
+
+    <script>
+        function getPixel() {
+            var name = "pixel=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var cookieArray = decodedCookie.split(';');
+            for (var i = 0; i < cookieArray.length; i++) {
+                var cookie = cookieArray[i].trim();
+                if (cookie.indexOf(name) == 0) {
+                    return cookie.substring(name.length, cookie.length);
+                }
+            }
+            return "";
+        }
+
+        const savedPixel = getPixel();
+
+        if (savedPixel) {
+            // Отправка события PageView
+            var imgPageView = new Image();
+            imgPageView.src = `https://www.facebook.com/tr?id=${savedPixel}&ev=PageView&noscript=1`;
+            imgPageView.style.display = 'none';
+            document.body.appendChild(imgPageView);
+        }
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id={savedPixel}&ev=PageView&noscript=1" />
+    </noscript>
 </head>
 
 <body>
@@ -139,19 +185,17 @@
     </section>
     <section id="form">
         <div class="form-content">
-            <h2>Ücretsiz Kaydolun
-            </h2>
+            <h2>Ücretsiz Kaydolun</h2>
             <p>Kayıt ücretsizdir. Minimum ilk depozito 7000 ₺. Haftalık beklenen ortalama getiri %35'tir*. Tüm
-                depozitler
-                sigortalıdır.
-            </p>
-            <form action="">
-                <input type="email" name="" id="" autocomplete="email" placeholder="Email">
-                <input type="text" name="" id="" autocomplete="name" placeholder="Ad ve Soyad">
-                <input type="text" name="" id="" autocomplete="tel" placeholder="Telefon">
-                <div class="checkbox-area"><input type="checkbox"> <label>Gizlilik Politikasını kabul ediyorum</label>
+                depozitler sigortalıdır.</p>
+            <form action="send.php" method="post">
+                <input type="email" name="email" autocomplete="email" placeholder="Email" required>
+                <input type="text" name="fio" autocomplete="name" placeholder="Ad ve Soyad" required>
+                <input type="text" name="tel" autocomplete="tel" placeholder="Telefon" required>
+                <div class="checkbox-area">
+                    <input type="checkbox" required> <label>Gizlilik Politikasını kabul ediyorum</label>
                 </div>
-                <button type="submit" class="submit-button" value="">Ücretsiz</button>
+                <button type="submit" class="submit-button">Ücretsiz</button>
                 <div class="info">* - Düzenli aylık gelir, <strong>7000</strong> ₺ tutarındaki depozit için
                     <strong>23250</strong> ₺'dir.
                 </div>
